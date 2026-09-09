@@ -13,7 +13,7 @@ VERIFY_TOKEN = os.environ.get("VERIFY_TOKEN", "my_secret_token")
 
 # Gemini Config
 genai.configure(api_key=GEMINI_API_KEY)
-model = genai.GenerativeModel('gemini-1.5-flash')
+model = genai.GenerativeModel('gemini-2.5-flash')
 
 @app.route('/webhook', methods=['GET'])
 def verify():
@@ -62,4 +62,3 @@ def send_whatsapp_msg(phone_number, text):
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=int(os.environ.get('PORT', 5000)))
-
