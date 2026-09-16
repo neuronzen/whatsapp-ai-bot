@@ -5,6 +5,10 @@ import google.generativeai as genai
 
 app = Flask(__name__)
 
+@app.route('/')
+def home():
+    return "Bot is running!", 200
+    
 # Environment Variables
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
 WHATSAPP_TOKEN = os.environ.get("WHATSAPP_TOKEN")
