@@ -13,7 +13,7 @@ VERIFY_TOKEN = os.environ.get("VERIFY_TOKEN", "my_secret_token")
 
 # Gemini Config
 genai.configure(api_key=GEMINI_API_KEY)
-model = genai.GenerativeModel('gemini-2.0-flash')
+model = genai.GenerativeModel('gemini-3.6-flash')
 
 @app.route('/webhook', methods=['GET'])
 def verify():
